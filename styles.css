@@ -36,10 +36,10 @@ h1 {
 }
 
 .cell{
+    position: relative;
     background-color: #ffffff;
     width: 120px;
     height: 120px;
-    text-align: center;
     margin: 1px;
     /* 影で強引に枠線を作る */
     box-shadow: 0px 0px 0px 2px #000000;   
@@ -54,15 +54,26 @@ h1 {
 }
 
 .cell p{
-    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    padding: 0 auto 0 auto;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0;
 }
 
-.cell:hover {
+.cell:hover img{
     transition: 0.2s;
     filter: brightness(90%);
 }
 
-.desc {
+.cell:hover p {
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.exp {
     margin: 8px auto 0 auto;
     width: 480px;
     text-align: center;
@@ -191,5 +202,10 @@ h1 {
 		transform: translateY(calc(-100vh - 50mm)) rotate(720deg);
 		filter: blur(5mm);
 	}
+}
+
+.about {
+    width: 50%;
+    margin: 0 auto 0 auto;
 }
 
